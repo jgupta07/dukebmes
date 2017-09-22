@@ -43,6 +43,14 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
+
+	<!-- FOR COLLAPSIBLE TEXT 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5jquery.mobile-1.4.5.min.js"></script>
+	 END COLLAPSIBLE TEXT -->
+
 </head>
 
 <body class="landing">
@@ -109,7 +117,87 @@
         <section id="events" class="wrapper alt style2">
             <header class="major">
                 <h2>Upcoming Events</h2>
-                <p>INSERT SOME METHOD OF LISTING EVENTS</p>
+                <p>Click on the events below to learn more!</p>
+                <!-- <div data-role="main" class="ui-content">
+    				<div data-role="collapsible">
+      					<h1>Click me - I'm collapsible!</h1>
+     					<p>I'm the expanded content.</p>
+    				</div>
+  				</div> -->
+  				<style>
+					button.accordion {
+					    background-color: #eee;
+					    color: #444;
+					    cursor: pointer;
+					    padding: 0 18px;
+					    float: center;
+					    width: 66%;
+					    border: none;
+					    text-align: left;
+					    outline: none;
+					    font-size: 15px;
+					    transition: 0.4s;
+					}
+
+					button.accordion.active, button.accordion:hover {
+					    background-color: #ddd;
+					}
+
+					button.accordion:after {
+					    content: '\002B';
+					    color: #777;
+					    font-weight: bold;
+					    float: right;
+					    margin-left: 5px;
+					}
+
+					button.accordion.active:after {
+					    content: "\2212";
+					}
+
+					div.panel {
+					    padding: 0 18px;
+					    background-color: gray;
+					    max-height: 0;
+					    width: 66%;
+					    margin: 0 auto;
+					    margin-bottom: 18px;
+					    overflow: hidden;
+					    transition: max-height 0.2s ease-out;
+					    font-size: 15px;
+					    border-radius: 5px;
+					}
+				</style>
+			</head>
+		<body>
+
+			<button class="accordion">Duke BMES Event #1</button>
+				<div class="panel">
+					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+				</div>
+
+			<button class="accordion">Duke BMES Event #2</button>
+				<div class="panel">
+					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+				</div>
+
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+				var i;
+
+				for (i = 0; i < acc.length; i++) {
+				  acc[i].onclick = function() {
+				    this.classList.toggle("active");
+				    var panel = this.nextElementSibling;
+				    if (panel.style.maxHeight){
+				      panel.style.maxHeight = null;
+				    } else {
+				      panel.style.maxHeight = panel.scrollHeight + "px";
+				    } 
+				  }
+				}
+			</script>
+
             </header>
         </section>
 
